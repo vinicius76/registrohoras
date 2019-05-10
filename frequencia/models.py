@@ -18,3 +18,12 @@ class Funcionario(models.Model):
             'Data de nascimento', blank=True, null=True,max_length = 128)
         tipoConta = models.ForeignKey(TipoConta,on_delete=models.DO_NOTHING,verbose_name="Tipo da conta")
 
+
+class Justificativa(models.model):
+    conteudo = models.TextField()
+    funcionario = models.ForeignKey(Funcioario)
+    chefe = models.ForeignKey(Chefe)
+
+
+
+
